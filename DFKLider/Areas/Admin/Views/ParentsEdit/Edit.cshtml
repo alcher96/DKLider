@@ -1,0 +1,66 @@
+﻿@model Parent
+@{
+    string strTitle = "Добавить запись";
+    ViewBag.Title = strTitle;
+}
+
+<form class="form-sample" asp-area="Admin" asp-controller="ParentsEdit" asp-action="Edit" method="post" enctype="multipart/form-data">
+    <div class="col-12 mt-4 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Имя</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" asp-for="Name" />
+                                <span asp-validation-for="Name"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Статус оплаты</label>
+                            <div class="col-sm-9">
+                                <input type="checkbox" class="form-control" asp-for="Payment" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Фамилия</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" asp-for="SurName" />
+                                <span asp-validation-for="SurName"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Контактный телефон</label>
+                            <div class="col-sm-9">
+                                <input type="tel" class="form-control" asp-for="Phone" />
+                                <span asp-validation-for="Phone"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Отчество</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" asp-for="MiddleName" />
+                                <span asp-validation-for="MiddleName"></span>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+                <button type="submit" class="btn btn-success mr-2">Добавить</button>
+            </div>
+        </div>
+    </div>
+</form>

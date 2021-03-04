@@ -1,0 +1,9 @@
+﻿@model List<StudentResponse>
+
+@foreach (var p in Model)
+{
+    <div>
+        <h3>@p.FullName</h3>
+        @p.Burthday
+    </div>
+}
